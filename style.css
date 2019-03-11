@@ -1,0 +1,27 @@
+
+* {
+    padding:0;
+    margin:0;    
+}
+
+.container-fluid {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+    font-size: 10vh;
+    color:white;
+}
+a {
+    color:white;
+}
+.choices span:hover {
+    color: aquamarine;
+}
+
+.score-board {
+    border: 2px solid white;
+}
+.hidden {
+    display: none;
+}
