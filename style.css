@@ -9,11 +9,12 @@
     height: 100vh;
     background-color: #2c3e50;
     text-align: center;
-    color:#16a085;
+    color:#3498db;
     overflow: hidden;
+    font-family: 'Shojumaru', 'cursive';
 }
 header {
-    font-size: 5vw;
+    font-size: 4.5vw;
     background-color:#34495e;
      border-bottom: 1px solid #95a5a6;
 }
@@ -43,15 +44,25 @@ header {
 }
 .choices span:hover {
     color: aquamarine;
+    cursor: pointer;
+    transition: all 0.4s ease;
 }
 
 .score-board {
     width: 25%;
     margin: auto;
-    font-size: 5vw;
+    font-size: 4vw;
     border: 3px solid #95a5a6;
     background-color: #34495e;
 }
+.badge {
+    font-size:2vw;
+    
+}
+
 .hidden {
     display: none;
 }
+
+
+
