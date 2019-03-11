@@ -19,6 +19,7 @@ function win(user, compuer) {
     userScore++;
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = computerScore;
+    
 }
 function lose(){
     computerScore++;
