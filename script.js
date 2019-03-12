@@ -8,6 +8,9 @@ const results_p = document.querySelector(".results");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
+const compScissors_div = document.getElementById("comp-s");
+const compPaper_div = document.getElementById("comp-p");
+const compRock_div = document.getElementById("comp-r");
 
 function getComputerChoice() {
     const choices = ['r', 'p', 's'];
@@ -26,6 +29,7 @@ function win(userChoice, computerChoice) {
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = computerScore;
     results_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ". Winner Winner!";
+    
 }
 function lose(userChoice, computerChoice){
     computerScore++;

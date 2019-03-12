@@ -43,7 +43,7 @@ header {
     
 }
 .choices span:hover {
-    color: aquamarine;
+    color:#24a35a ;
     cursor: pointer;
     transition: all 0.4s ease;
 }
@@ -61,10 +61,19 @@ header {
 }
 .results {
     font-size:2vw;
+    width:100%;
+    position: sticky;
+    bottom:0;    
 }
-.hidden {
-    display: none;
+.green-glow {
+    color: aquamarine;
+   
+    
+    
 }
-
-
+.red-glow {
+    color: darkred;
+    box-shadow: 0 0 10px darkred;
+    
+}
 
