@@ -13,7 +13,7 @@ const compPaper_div = document.getElementById("comp-p");
 const compRock_div = document.getElementById("comp-r");
 
 function getComputerChoice() {
-    const choices = ['r', 'p', 's'];
+    const choices = ['cr', 'cp', 'cs'];
     const randNumber = Math.floor(Math.random() * 3);
     return choices[randNumber];
 }
@@ -29,13 +29,20 @@ function win(userChoice, computerChoice) {
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = computerScore;
     results_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ". Winner Winner!";
-    
+    document.getElementById(userChoice).classList.add('green-glow');
+    document.getElementById(computerChoice).classList.add('red-glow');
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('green-glow')}, 2000)
+    setTimeout(function() {document.getElementById(computerChoice).classList.remove('red-glow')}, 2000);
 }
 function lose(userChoice, computerChoice){
     computerScore++;
     compScore_span.innerHTML = computerScore;
     userScore_span.innerHTML = userScore;
     results_p.innerHTML = convertToWord(userChoice) + " loses to " + convertToWord(computerChoice) + ". Sorry.";
+    document.getElementById(userChoice).classList.add('green-glow');
+    document.getElementById(computerChoice).classList.add('red-glow');
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('green-glow')}, 3000)
+    setTimeout(function() {document.getElementById(computerChoice).classList.remove('red-glow')}, 3000);
 }
 function draw(){
     results_p.innerHTML = "Draw!";
@@ -47,14 +54,14 @@ function draw(){
 function game(userChoice){
     const compChoice = getComputerChoice();
     switch(userChoice + compChoice) {
-        case "rs":
-        case "pr":
-        case "sp":
+        case "rcs":
+        case "pcr":
+        case "scp":
             win(userChoice, compChoice);
             break;
-        case "rp":
-        case "ps":
-        case "sr":
+        case "rcp":
+        case "pcs":
+        case "scr":
             lose(userChoice, compChoice);
             break;
         default:

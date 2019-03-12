@@ -67,13 +67,16 @@ header {
 }
 .green-glow {
     color: aquamarine;
+    border-radius: 50%;
+    box-shadow:0 0 10px aquamarine;
    
     
     
 }
 .red-glow {
     color: darkred;
-    box-shadow: 0 0 10px darkred;
+    border-radius: 50%;
+    box-shadow:0 0 10px red;
     
 }
 
