@@ -4,6 +4,7 @@ var computerScore = 0;
 const userScore_span = document.getElementById("player-score");
 const compScore_span = document.getElementById("comp-score");
 const scoreBoard_div = document.querySelector(".score-board");
+const results_p = document.querySelector(".results");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
@@ -15,19 +16,20 @@ function getComputerChoice() {
 }
 
 
-function win(user, compuer) {
+function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = computerScore;
-    
+    results_p.innerHTML = userChoice + " beats " + computerChoice + ". Winner Winner!";
 }
-function lose(){
+function lose(userChoice, computerChoice){
     computerScore++;
     compScore_span.innerHTML = computerScore;
     userScore_span.innerHTML = userScore;
+    results_p.innerHTML = userChoice + " loses to " + computerChoice + ". Sorry.";
 }
 function draw(){
-    
+    results_p.innerHTML = "Draw!";
 }
 
 

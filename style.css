@@ -59,7 +59,9 @@ header {
     font-size:2vw;
     
 }
-
+.results {
+    font-size:2vw;
+}
 .hidden {
     display: none;
 }
