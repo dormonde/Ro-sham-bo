@@ -15,18 +15,23 @@ function getComputerChoice() {
     return choices[randNumber];
 }
 
+function convertToWord(letter) {
+    if (letter === "r") return "Rock";
+    if (letter === "p") return "Paper";
+    return "Scissors";
+}
 
 function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = computerScore;
-    results_p.innerHTML = userChoice + " beats " + computerChoice + ". Winner Winner!";
+    results_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ". Winner Winner!";
 }
 function lose(userChoice, computerChoice){
     computerScore++;
     compScore_span.innerHTML = computerScore;
     userScore_span.innerHTML = userScore;
-    results_p.innerHTML = userChoice + " loses to " + computerChoice + ". Sorry.";
+    results_p.innerHTML = convertToWord(userChoice) + " loses to " + convertToWord(computerChoice) + ". Sorry.";
 }
 function draw(){
     results_p.innerHTML = "Draw!";
